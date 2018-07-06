@@ -4,8 +4,8 @@ This application uses the Model-View-ViewModel (MVVM) architecture.
 
 To run locally, create gradle.properties file in project`s root folder and put your public and private key.
 
-- marvelPublicKey = "YOUR-PUBLIC-KEY"
-- marvelPrivateKey = "YOUR-PRIVATE-KEY"
+- MARVEL_PUBLIC_KEY  = "YOUR-PUBLIC-KEY"
+- MARVEL_PRIVATE_KEY = "YOUR-PRIVATE-KEY"
 
 
 Libraries
