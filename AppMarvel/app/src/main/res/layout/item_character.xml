@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.carlosughini.appmarvel.viewModel.CharacterViewModel">
+        </variable>
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_character_height">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/characterImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:civ_border_color="#FFF"
+                app:civ_border_width="2dp"
+                app:imageUrl="@{viewmodel.imageUrl}"/>
+
+            <TextView
+                android:id="@+id/characterName"
+                android:text="@{viewmodel.model.name}"
+                android:layout_width="0dp"
+                android:textColor="#FFF"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>
